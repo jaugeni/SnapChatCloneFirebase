@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,35 +9,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CameraVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapchatCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="SnapchatCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REJ-yg-GPM" customClass="PreviewView" customModule="SnapchatCloneFirebase" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-jx-cdH">
+                                <rect key="frame" x="175.66666666666666" y="670" width="63" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="ONC-zc-qjU"/>
+                                    <constraint firstAttribute="width" constant="63" id="Rl3-3G-H7i"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="channgeCameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5P8-os-WrK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-Ht-n9V">
+                                <rect key="frame" x="345" y="20" width="69" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="R4E-U4-aJk"/>
+                                    <constraint firstAttribute="height" constant="48" id="XgY-7b-caJ"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j0K-Se-k2B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="REJ-yg-GPM" secondAttribute="bottom" id="32Y-cP-JxI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Iui-jx-cdH" secondAttribute="bottom" constant="8" id="Cls-3Z-c9k"/>
+                            <constraint firstItem="qLx-Ht-n9V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Enj-hX-dxc"/>
                             <constraint firstItem="REJ-yg-GPM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KSK-BW-eSI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="REJ-yg-GPM" secondAttribute="bottom" id="XJg-Me-Kl5"/>
+                            <constraint firstAttribute="trailing" secondItem="qLx-Ht-n9V" secondAttribute="trailing" id="V84-53-MP5"/>
+                            <constraint firstItem="Iui-jx-cdH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7U-Nd-0lK"/>
                             <constraint firstAttribute="trailing" secondItem="REJ-yg-GPM" secondAttribute="trailing" id="t1v-C5-q1E"/>
                             <constraint firstItem="REJ-yg-GPM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t5a-TH-ti3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="REJ-yg-GPM" id="oGg-Dy-8Wj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>

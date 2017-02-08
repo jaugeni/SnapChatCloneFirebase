@@ -74,8 +74,8 @@
 		93792E211E32B059005EA341 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				93792E111E32A4A1005EA341 /* CameraVC.swift */,
 				93792E231E32B2F8005EA341 /* CameraViewController.swift */,
+				93792E111E32A4A1005EA341 /* CameraVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -291,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P2GURVV2B3;
 				INFOPLIST_FILE = SnapchatCloneFirebase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YauheniIvaniuk.SnapchatCloneFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P2GURVV2B3;
 				INFOPLIST_FILE = SnapchatCloneFirebase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YauheniIvaniuk.SnapchatCloneFirebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
