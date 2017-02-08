@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		93792E101E32A4A1005EA341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E0F1E32A4A1005EA341 /* AppDelegate.swift */; };
-		93792E121E32A4A1005EA341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E111E32A4A1005EA341 /* ViewController.swift */; };
+		93792E121E32A4A1005EA341 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E111E32A4A1005EA341 /* CameraVC.swift */; };
 		93792E151E32A4A1005EA341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93792E131E32A4A1005EA341 /* Main.storyboard */; };
 		93792E171E32A4A1005EA341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93792E161E32A4A1005EA341 /* Assets.xcassets */; };
 		93792E1A1E32A4A1005EA341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93792E181E32A4A1005EA341 /* LaunchScreen.storyboard */; };
+		93792E241E32B2F8005EA341 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E231E32B2F8005EA341 /* CameraViewController.swift */; };
+		93792E261E32B31C005EA341 /* PhotoCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E251E32B31C005EA341 /* PhotoCaptureDelegate.swift */; };
+		93792E281E32B321005EA341 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93792E271E32B321005EA341 /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93792E0C1E32A4A1005EA341 /* SnapchatCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapchatCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93792E0F1E32A4A1005EA341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93792E111E32A4A1005EA341 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		93792E111E32A4A1005EA341 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		93792E141E32A4A1005EA341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93792E161E32A4A1005EA341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93792E191E32A4A1005EA341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93792E1B1E32A4A2005EA341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93792E231E32B2F8005EA341 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		93792E251E32B31C005EA341 /* PhotoCaptureDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureDelegate.swift; sourceTree = "<group>"; };
+		93792E271E32B321005EA341 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		93792E0E1E32A4A1005EA341 /* SnapchatCloneFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				93792E221E32B069005EA341 /* View */,
+				93792E211E32B059005EA341 /* Controller */,
 				93792E0F1E32A4A1005EA341 /* AppDelegate.swift */,
-				93792E111E32A4A1005EA341 /* ViewController.swift */,
 				93792E131E32A4A1005EA341 /* Main.storyboard */,
 				93792E161E32A4A1005EA341 /* Assets.xcassets */,
 				93792E181E32A4A1005EA341 /* LaunchScreen.storyboard */,
 				93792E1B1E32A4A2005EA341 /* Info.plist */,
 			);
 			path = SnapchatCloneFirebase;
+			sourceTree = "<group>";
+		};
+		93792E211E32B059005EA341 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				93792E111E32A4A1005EA341 /* CameraVC.swift */,
+				93792E231E32B2F8005EA341 /* CameraViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		93792E221E32B069005EA341 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93792E271E32B321005EA341 /* PreviewView.swift */,
+				93792E251E32B31C005EA341 /* PhotoCaptureDelegate.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93792E121E32A4A1005EA341 /* ViewController.swift in Sources */,
+				93792E281E32B321005EA341 /* PreviewView.swift in Sources */,
+				93792E121E32A4A1005EA341 /* CameraVC.swift in Sources */,
 				93792E101E32A4A1005EA341 /* AppDelegate.swift in Sources */,
+				93792E261E32B31C005EA341 /* PhotoCaptureDelegate.swift in Sources */,
+				93792E241E32B2F8005EA341 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +330,7 @@
 				93792E201E32A4A2005EA341 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
