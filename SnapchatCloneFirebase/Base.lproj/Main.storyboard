@@ -26,7 +26,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-jx-cdH">
-                                <rect key="frame" x="175.66666666666666" y="670" width="63" height="58"/>
+                                <rect key="frame" x="176" y="670" width="63" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="ONC-zc-qjU"/>
                                     <constraint firstAttribute="width" constant="63" id="Rl3-3G-H7i"/>
@@ -61,7 +61,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="qLx-Ht-n9V" id="Tza-3b-jXZ"/>
                         <outlet property="previewView" destination="REJ-yg-GPM" id="oGg-Dy-8Wj"/>
+                        <outlet property="recordButton" destination="Iui-jx-cdH" id="1sz-cv-Jra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
