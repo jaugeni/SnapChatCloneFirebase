@@ -10,26 +10,38 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailField: RoundTextField!
+    @IBOutlet weak var passwordField: RoundTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func logInPressed(_ sender: Any) {
+        if let email = emailField.text, let pass = passwordField.text , (email.characters.count > 0 && pass.characters.count > 0) {
+            
+            AuthService.instance.login(email: email, password: pass, onComplet: { (errMsg, data) in
+                guard errMsg == nil else {
+                    self.alert(title: "Error Authentication", message: errMsg!)
+                    return
+                }
+                
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+        } else {
+            alert(title: "Username and Password Required", message: "You mast enter both a username and a password")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
-    */
+
 
 }

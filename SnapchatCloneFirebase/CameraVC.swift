@@ -19,10 +19,12 @@ class CameraVC: CameraViewController, CameraViewControllerDelegate {
     
     override func viewDidLoad() {
         
-        delegate = self
+        
         self._previewView = previewView
         
         super.viewDidLoad()
+        
+        delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +76,18 @@ class CameraVC: CameraViewController, CameraViewControllerDelegate {
     
     func snapshotFailed() {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let usersVC = segue.destination as? UsersVC {
+            if let videoDict = sender as? Dictionary<String, URL> {
+                let url = videoDict["videoURL"]
+                usersVC.videoURL = url
+            } else if let snapDict = sender as? Dictionary<String, Data> {
+                let snapData = snapDict["snapshotData"]
+                usersVC.snapData = snapData
+            }
+        }
     }
     
 }

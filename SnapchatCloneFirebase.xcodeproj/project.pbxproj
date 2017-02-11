@@ -20,6 +20,12 @@
 		93BC4AFF1E4E774C00342818 /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4AFE1E4E774C00342818 /* RoundTextField.swift */; };
 		93BC4B031E4E80C500342818 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B021E4E80C500342818 /* RoundedButton.swift */; };
 		93BC4B051E4E849D00342818 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B041E4E849D00342818 /* LoginVC.swift */; };
+		93BC4B081E4E897100342818 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B071E4E897100342818 /* AuthService.swift */; };
+		93BC4B0B1E4E97F500342818 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B0A1E4E97F500342818 /* DataService.swift */; };
+		93BC4B0D1E4E9B8D00342818 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B0C1E4E9B8D00342818 /* UsersVC.swift */; };
+		93BC4B0F1E4E9CB600342818 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B0E1E4E9CB600342818 /* UserCell.swift */; };
+		93BC4B111E4EA00E00342818 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B101E4EA00E00342818 /* User.swift */; };
+		93BC4B151E4EA21E00342818 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BC4B141E4EA21E00342818 /* Constants.swift */; };
 		AA9D4F00E4F0135E53A592C8 /* Pods_SnapchatCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97E9632FE728A0560D675D6 /* Pods_SnapchatCloneFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,12 @@
 		93BC4AFE1E4E774C00342818 /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		93BC4B021E4E80C500342818 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		93BC4B041E4E849D00342818 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		93BC4B071E4E897100342818 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		93BC4B0A1E4E97F500342818 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		93BC4B0C1E4E9B8D00342818 /* UsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
+		93BC4B0E1E4E9CB600342818 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		93BC4B101E4EA00E00342818 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		93BC4B141E4EA21E00342818 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC862506F03F757241CAC850 /* Pods-SnapchatCloneFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatCloneFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatCloneFirebase/Pods-SnapchatCloneFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		C97E9632FE728A0560D675D6 /* Pods_SnapchatCloneFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatCloneFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +97,9 @@
 		93792E0E1E32A4A1005EA341 /* SnapchatCloneFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				93BC4B131E4EA20900342818 /* Util */,
+				93BC4B121E4EA1FC00342818 /* Model */,
+				93BC4B061E4E894D00342818 /* Services */,
 				93BC4AF71E4E217B00342818 /* Protocols */,
 				93792E221E32B069005EA341 /* View */,
 				93792E211E32B059005EA341 /* Controller */,
@@ -104,6 +119,7 @@
 				93792E111E32A4A1005EA341 /* CameraVC.swift */,
 				93792E231E32B2F8005EA341 /* CameraViewController.swift */,
 				93BC4B041E4E849D00342818 /* LoginVC.swift */,
+				93BC4B0C1E4E9B8D00342818 /* UsersVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -115,6 +131,7 @@
 				93792E251E32B31C005EA341 /* PhotoCaptureDelegate.swift */,
 				93BC4AFE1E4E774C00342818 /* RoundTextField.swift */,
 				93BC4B021E4E80C500342818 /* RoundedButton.swift */,
+				93BC4B0E1E4E9CB600342818 /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -125,6 +142,31 @@
 				93BC4AFA1E4E220A00342818 /* CameraViewControllerDelegate.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		93BC4B061E4E894D00342818 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93BC4B071E4E897100342818 /* AuthService.swift */,
+				93BC4B0A1E4E97F500342818 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		93BC4B121E4EA1FC00342818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93BC4B101E4EA00E00342818 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		93BC4B131E4EA20900342818 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				93BC4B141E4EA21E00342818 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		CBFCD4FC63B977057D26B870 /* Pods */ = {
@@ -262,14 +304,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				93792E281E32B321005EA341 /* PreviewView.swift in Sources */,
+				93BC4B0F1E4E9CB600342818 /* UserCell.swift in Sources */,
 				93792E121E32A4A1005EA341 /* CameraVC.swift in Sources */,
 				93BC4AFB1E4E220A00342818 /* CameraViewControllerDelegate.swift in Sources */,
 				93BC4B031E4E80C500342818 /* RoundedButton.swift in Sources */,
 				93BC4AFF1E4E774C00342818 /* RoundTextField.swift in Sources */,
+				93BC4B111E4EA00E00342818 /* User.swift in Sources */,
+				93BC4B0B1E4E97F500342818 /* DataService.swift in Sources */,
 				93BC4B051E4E849D00342818 /* LoginVC.swift in Sources */,
 				93792E101E32A4A1005EA341 /* AppDelegate.swift in Sources */,
+				93BC4B151E4EA21E00342818 /* Constants.swift in Sources */,
+				93BC4B081E4E897100342818 /* AuthService.swift in Sources */,
 				93792E261E32B31C005EA341 /* PhotoCaptureDelegate.swift in Sources */,
 				93792E241E32B2F8005EA341 /* CameraViewController.swift in Sources */,
+				93BC4B0D1E4E9B8D00342818 /* UsersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
